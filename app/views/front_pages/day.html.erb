@@ -1,0 +1,101 @@
+ <head>
+    <title>Day</title>
+	<meta charset="utf-8">
+	 <style type="text/css">
+	 
+ <!--
+   
+    .like-content {
+    display: inline-block;
+    width: 100%;
+    margin: 40px 0 0;
+    padding: 40px 0 0;
+    font-size: 15px;
+    border-top: 10px dashed #eee;
+    text-align: center;
+}
+    .like-content span {
+	color: #2E2E2E;
+	font-family: monospace;
+    }
+    .like-content .btn-secondary {
+    	  display: block;
+    	  margin: 40px auto 0px;
+        text-align: center;
+        background: #ed2553;
+        border-radius: 3px;
+        box-shadow: 0 10px 20px -8px rgb(240, 75, 113);
+        padding: 10px 17px;
+        font-size: 18px;
+        cursor: pointer;
+        border: none;
+        outline: none;
+        color: #ffffff;
+        text-decoration: none;
+        -webkit-transition: 0.3s ease;
+        transition: 0.3s ease;
+    }
+    .like-content .btn-secondary:hover {
+    	  transform: translateY(-3px);
+    }
+    .like-content .btn-secondary .fa {
+    	  margin-right: 5px;
+    }
+    .animate-like {
+    	animation-name: likeAnimation;
+    	animation-iteration-count: 1;
+    	animation-fill-mode: forwards;
+    	animation-duration: 0.65s;
+    }
+    @keyframes likeAnimation {
+      0%   { transform: scale(30); }
+      100% { transform: scale(1); }
+    }
+ //-->
+ </style>
+</head>
+	  <!--==============================header=================================-->
+    <header id="head">
+        <div class="container">
+        <h1><a href="home.html">LOVE ME</br></br><span> Love Yourself </span></a></h1>
+					<nav>
+						<ul class="sf-menu">
+							<li><a href="home">Home</a></li>
+	                        <li  class="current"><a href="day">하루한줄 </a></li>
+							<li><a href="movie">영화 책</a></li>
+							    <ul>
+									<li><a href="#">영화</a></li>
+									<li><a href="#">노래</a></li>
+									<li><a href="#">책</a></li>	
+								</ul>
+							<li><a href="coun">상담서비스</a></li>
+							<li><a href="shop">굿즈샵</a></li>
+						</ul>
+	    </div>             
+	</header>   
+	<!--=======content================================-->
+	
+	
+    <!-- 하루 한줄 -->
+    <br><br><br><br>
+	<div class="day_note_content">
+	<%= @day_note.content%>
+	</div>
+	<br>
+	<br><br><br><br><br><br><br><br><br>
+	<div class="like-content">
+      <span>
+        Did you like this phrase? Press like to make it easier for others to see
+      </span>
+      <button class="btn-secondary like-review">
+        <i class="fa fa-heart" aria-hidden="true"></i> Like
+      </button>
+    </div>
+    <script>
+        $(function(){
+	        $(document).one('click', '.like-review', function(e) {
+	    	$(this).html('<i class="fa fa-heart" aria-hidden="true"></i> You liked this');
+		    $(this).children('.fa-heart').addClass('animate-like');
+	        });
+        });
+    </script>

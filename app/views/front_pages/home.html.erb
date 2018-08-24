@@ -1,0 +1,70 @@
+    <head>
+    <title>Home</title>
+	<meta charset="utf-8">
+    </head>
+	<body>
+	  <!--==============================header=================================-->
+    <header id="header">
+        <div class="container">
+        <h1><a href="/home"><br> LOVE ME <br><br><br><br> Love Yourself </a></h1>
+					
+					<div class="con2">	
+						<ul class="sf-menu" style="margin-left: 700px; width: 300px;">
+							<li class="current"><a href="/home">Home</a></li><br>
+	                        <li><a href="front_pages/day">하루한줄 </a></li><br>
+							<li><a href="front_pages/movie">영화 책</a></li><br>
+								<ul>
+									<li><a href="#">영화</a></li>
+									<li><a href="#">노래</a></li>
+									<li><a href="#">책</a></li>	
+								</ul>
+							<li><a href="front_pages/coun">상담서비스</a></li><br>
+							<li><a href="front_pages/shop">굿즈샵</a></li><br>
+						</ul>
+	                </div>
+	    </div>             
+	</header>               
+	   <!--=======content================================-->
+	
+	    
+	   
+	    <br><br>
+	    <br><br>
+	 <!--=======about=================================-->
+	 
+	<div class= "about">
+      <br>
+      <h1 id="bout"> About </h1>
+      <br>
+      <p class="bout2">오늘 많이 힘들었죠?  </h2>
+      <p class="bout3"> 스트레스, 우울증이 심각해지면서 자존감이 낮아지고 있습니다.<br>
+                  우리가 소소한 위로라도 되어주면 어떨까요?<br> 
+                  바쁜현대인들에게 웹서비스를 통해 간단한 치료 및 상담을 제공해주며,<br>
+                  스트레스와 외부압박으로 낮아진 자존감을 높일 수 있는 탈출구를 마련하는 방안을 생각했습니다.
+                  </h3>
+      <p class="bout4">'<strong><a href="/home">Love Me</a></strong>' 힘들때 우리가 있어줄게요.</h3>
+      <br><br>
+       <% if user_signed_in? %>
+      <p class="bout2"><%= current_user.email%>님!</p2>
+      <%end%>
+       <p class="bout_last"> <a href='/log/index'>로그인/장바구니</a><br />
+       <br>
+     
+      카카오톡 플러스 친구명 : love_me 를 등록 하시면 공지와 하루 한줄이 발송됩니다.
+      </p>
+      
+   </div>
+	 
+	 
+	 
+	 
+	 
+	 
+	  <!--=======footer=================================-->
+	<footer id="footer">
+	<div class="container">
+	    <div class="footer_bottom"> Copyright © Duksung Univ </div>
+	</div>
+	</footer>    
+	  
+	</body>

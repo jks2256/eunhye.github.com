@@ -1,0 +1,51 @@
+<style>
+ 
+ *{font-size:20px;
+  font-family:'Dosis';
+ }
+ .a{width:20px;height:20px;}
+</style>
+<div class= "about">
+
+<br />
+<br />
+<br />
+<% if user_signed_in? %>
+ 현재 로그인 된 유저의 이메일 :<%= current_user.email%><br />
+ <hr />
+ <br /><%= link_to "로그아웃", destroy_user_session_path, method: :delete, data: { confirm: "are you sure?"} %>
+ <br />
+ <hr />
+ 
+ <p>[ List ]</p>
+ <br />
+ <form action="/front_pages/buy">
+ 
+ <% @item.each do |c| 
+    if c.user_id==@num %>
+   <%= c.title %>&nbsp;&nbsp;&nbsp;<input class="a" type="checkbox" name="list" value="<%=c.title%>" id="bout"> </input><br />
+ <br />
+ <%end%>
+ 
+
+
+ <hr />
+ 
+<%end %>
+<input type='submit' value='결제하기' /><br />
+<br />
+ </form>
+
+<% else %>
+ <%=link_to '로그인', new_user_session_path %>
+<% end %>
+
+<br />
+<br />
+<a href='/front_pages/home'>홈으로 가기</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href='/front_pages/shop'>더 쇼핑하다 올래요</a>
+<br />
+<br />
+<br />
+
+</div>

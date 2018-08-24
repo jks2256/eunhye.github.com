@@ -1,0 +1,279 @@
+ <head>
+    <title>Shop</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans Condensed", sans-serif;
+  font-weight: 700;
+}
+
+html,
+body {
+  background-image: url("/../image/background.jpg");
+}
+
+header {
+  width: 95%;
+  display: flex;
+  justify-content: flex-end;
+  flex-flow: row wrap;
+}
+header ul {
+  padding: 1.2em 0 0.5em;
+}
+header span {
+  padding: 0 0 0 0.5em;
+}
+header span,
+header i {
+  color: #2b2d42;
+}
+header i:nth-of-type(2) {
+  cursor: pointer;
+}
+
+.row {
+  width: 100%;
+  justify-content: flex-start;
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.product, .product--blue, .product--orange, .product--red, .product--green, .product--yellow, .product--pink {
+  box-shadow: 1px 5px 15px #ccc;
+  width: 15em;
+  height: auto;
+  border-radius: 3px;
+  padding: 2em;
+  margin: 1em;
+  overflow: hidden;
+  position: relative;
+  flex: auto;
+}
+.product--blue {
+  background: linear-gradient(-45deg, #B39CCF 50%, rgba(255, 255, 255, 0.5) 50%);
+}
+.product--orange {
+  background: linear-gradient(-45deg, #ef6f6c 50%, rgba(255, 255, 255, 0.5) 50%);
+}
+.product--red {
+  background: linear-gradient(-45deg, #e84855 50%, rgba(255, 255, 255, 0.5) 50%);
+}
+.product--green {
+  background: linear-gradient(-45deg, #7DB27F 50%, rgba(255, 255, 255, 0.5) 50%);
+}
+.product--yellow {
+  background: linear-gradient(-45deg, #e8db7d 50%, rgba(255, 255, 255, 0.5) 50%);
+}
+.product--pink {
+  background: linear-gradient(-45deg, #ff386d 50%, rgba(255, 255, 255, 0.5) 50%);
+}
+.product img, .product--blue img, .product--orange img, .product--red img, .product--green img, .product--yellow img, .product--pink img {
+  max-width: 100%;
+  height: auto !important;
+  text-align: center;
+}
+.product_inner {
+  display: flex;
+  align-items: center;
+  flex-flow: column wrap;
+}
+.product_inner p {
+  color: rgba(255, 255, 255, 0.9);
+}
+.product_inner button {
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  color: #fff;
+  border-radius: 3px;
+  padding: 1em 3em;
+  margin: 1em 0 0 0;
+  background: none;
+  cursor: pointer;
+  transition: background ease-in 0.25s;
+}
+.product_inner button:hover {
+  background: white;
+  color: #2b2d42;
+}
+.product_inner button:before {
+  font-family: FontAwesome;
+  content: "\f07A";
+  color: #fff;
+  position: absolute;
+  font-size: 1.5em;
+  margin: 0 -1.5em;
+}
+.product_inner button:hover:before {
+  color: #2b2d42;
+}
+.product_overlay {
+  background: rgba(255, 255, 255, 0.9);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  -webkit-transform: translateY(-500px);
+          transform: translateY(-500px);
+  opacity: 0;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+}
+.product_overlay h2 {
+  color: rgba(43, 45, 66, 0.7);
+  font-size: 1.2em;
+  margin: 1em 0;
+}
+.product_overlay i {
+  color: rgba(43, 45, 66, 0.7);
+  font-size: 1.5em;
+}
+ 
+ 
+ 
+	//-->
+</style>
+</head>
+ <!--==============================header=================================-->
+    <header id="head">
+        <div class="container">
+        <h1><a href="home.html">LOVE ME</br></br><span> LOVE YOURSELF </span></a></h1>
+					<nav>
+						<ul class="sf-menu">
+							<li><a href="home">Home</a></li>
+	                        <li><a href="day">하루한줄 </a></li>
+							<li><a href="movie">영화 책</a></li>
+								<ul>
+									<li><a href="#">영화</a></li>
+									<li><a href="#">노래</a></li>
+									<li><a href="#">책</a></li>	
+								</ul>
+							<li><a href="coun">상담서비스</a></li>
+							<li class="current"><a href="shop">굿즈샵</a></li>
+						</ul>
+	                </nav>
+	    </div>
+	     <ul>
+	   		 <i class='fa fa-shopping-cart'>
+	      	 <span class='counter'></span>
+	    	 </i>
+	  	</ul>             
+	</header>   
+<body>
+	<br><br><br>
+		<div class='row'>
+  <div class='product--blue'>
+    <div class='product_inner'>
+      <img src="/eco.PNG" width='300'>
+      <p>LOVE ME 에코백</p>
+      <p>Price 12000</p>
+      <form action='/items/create'>
+        <hidden name='price' value='12000'></hidden>
+        <hidden name='content' value=''></hidden>
+      <button name='item' value='bag'>장바구니에 담기</button>
+      </form>
+    </div>
+    <div class='product_overlay'>
+      <h2>Added to basket</h2>
+      <i class='fa fa-check'></i>
+    </div>
+  </div>
+  <div class='product--orange'>
+  	<div class='product_inner'>
+		<img src="/cup1.jpg" width='300'/>
+      <p>LOVE ME 텀블러</p>
+      <p>Price 12000</p>
+     <form action='/items/create'>
+        <hidden name='price' value='12000'></hidden>
+        <hidden name='content' value=''></hidden>
+      <button name='item' value='텀블러'>장바구니에 담기</button>
+      </form>
+    </div>
+    <div class='product_overlay'>
+      <h2>Added to basket</h2>
+      <i class='fa fa-check'></i>
+    </div>
+  </div>
+  <div class='product--red'>
+    <div class='product_inner'>
+    	     <br><br><br>
+      <img src="/LOVE.png" width='300'>
+      <br><br><br><br>
+      <p>LOVE ME Sticker</p>
+      <p>Price 5000</p>
+       <form action='/items/create'>
+        <hidden name='price' value='5000'></hidden>
+        <hidden name='content' value=''></hidden>
+      <button name='item' value='Love Me 스티커'>장바구니에 담기</button>
+      </form>
+    </div>
+    <div class='product_overlay'>
+      <h2>Added to basket</h2>
+      <i class='fa fa-check'></i>
+    </div>
+  </div>
+  <div class='product--green'>
+    <div class='product_inner'>
+      <img src="/lovemecase.jpg" width='300'>
+      <p>LOVE ME Phone Case</p>
+      <p>Price 10000</p>
+       <form action='/items/create'>
+        <hidden name='price' value='10000'></hidden>
+        <hidden name='content' value=''></hidden>
+      <button name='item' value='Love ME 폰 케이스'>장바구니에 담기</button>
+      </form>
+    </div>
+    <div class='product_overlay'>
+      <h2>Added to basket</h2>
+      <i class='fa fa-check'></i>
+    </div>
+  </div>
+</body>
+</html>
+
+<script type="text/javascript">
+	$(function() {
+
+  "use strict"
+  
+  var init = "No items yet!";
+  var counter = 0;
+
+  // Initial Cart
+  $(".counter").html(init);
+  
+  // Add Items To Basket
+  function addToBasket() {
+    counter++;
+    $(".counter").html(counter).animate({
+      'opacity' : '0'
+    },300, function() {
+      $(".counter").delay(300).animate({
+        'opacity' : '1'
+      })
+    })
+  }
+
+  // Add To Basket Animation
+  $("button").on("click", function() {
+    addToBasket(); $(this).parent().parent().find(".product_overlay").css({
+      'transform': ' translateY(0px)',
+      'opacity': '1',
+      'transition': 'all ease-in-out .45s'
+    }).delay(1500).queue(function() {
+      $(this).css({
+        'transform': 'translateY(-500px)',
+        'opacity': '0',
+        'transition': 'all ease-in-out .45s'
+      }).dequeue();
+    });
+  });
+});
+</script>
+

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang = "ko">
+<head>
+<meta charset="utf-8"/>
+<script language="javascript">
+<!--
+function itemSum(frm)
+{
+   var sum = 0;
+   var count = frm.chkbox.length;
+   for(var i=0; i < count; i++ ){
+       if( frm.chkbox[i].checked == true ){
+	    sum += parseInt(frm.chkbox[i].value);
+       }
+   }
+   frm.total_sum.value = sum;
+}
+//-->
+</script>
+</head>
+<body>
+     <header id="head">
+        <div class="container">
+        <h1><a href="home.html">LOVE ME</br></br><span> Love Yourself </span></a></h1>
+					<nav>
+						<ul class="sf-menu">
+							<li><a href="home">Home</a></li>
+	                        <li  class="current"><a href="day">하루한줄 </a></li>
+							<li><a href="movie">영화 책</a></li>
+							    <ul>
+									<li><a href="#">영화</a></li>
+									<li><a href="#">노래</a></li>
+									<li><a href="#">책</a></li>	
+								</ul>
+							<li><a href="coun">상담서비스</a></li>
+							<li><a href="shop">굿즈샵</a></li>
+						</ul>
+	    </div>             
+	</header>   
+    <h3>상담서비스</h3>
+    <div style="margin-left:auto;margin-right:auto;width:700px;font-family:'돋움';font-size:15px;" >
+    <table border= "test" >
+<h1>[자아존중감 검사]</h1>
+<form> * 성별을 선택해 주세요.
+<br>성별 :
+<input type="radio" name="gender" value="male"> 남성
+<input type="radio" name="gender" value="female"> 여성
+</form>
+<br><br>
+<form> * 해당하는 곳에 선택해 주세요. <br>
+
+<input type="radio" name="school" value="middle"> 중, 고등학생
+<input type="radio" name="school" value="high"> 대학생
+<input type="radio" name="school" value="adult"> 직장인
+<input type="radio" name="school" value="adult"> 기타
+
+
+</form>
+
+<body>
+<form name="form">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td>1.나는 부모님, 선생님, 친구로부터 사랑을 받고 있는 편이다.</td>
+    <td height="25">&nbsp;1<input name="chkbox" type="checkbox" value="1" onClick="itemSum(this.form);">&nbsp;</td>
+    <td height="25">&nbsp;2<input name="chkbox" type="checkbox" value="2" onClick="itemSum(this.form);">&nbsp;</td>
+    <td height="25">&nbsp;3<input name="chkbox" type="checkbox" value="3" onClick="itemSum(this.form);">&nbsp;</td>
+    <td height="25">&nbsp;4<input name="chkbox" type="checkbox" value="4" onClick="itemSum(this.form);">&nbsp;</td>
+    <td height="25">&nbsp;5<input name="chkbox" type="checkbox" value="5" onClick="itemSum(this.form);">&nbsp;</td>
+  </tr><br>
+  <tr>
+    <td>2.나의 미래는 밝은 편이며, 더 나아지려고 노력하고 있다.</td>
+    <td height="25">&nbsp;1<input name="chkbox" type="checkbox" value="1" onClick="itemSum(this.form);">&nbsp;</td>
+    <td height="25">&nbsp;2<input name="chkbox" type="checkbox" value="2" onClick="itemSum(this.form);">&nbsp;</td>
+    <td height="25">&nbsp;3<input name="chkbox" type="checkbox" value="3" onClick="itemSum(this.form);">&nbsp;</td>
+    <td height="25">&nbsp;4<input name="chkbox" type="checkbox" value="4" onClick="itemSum(this.form);">&nbsp;</td>
+    <td height="25">&nbsp;5<input name="chkbox" type="checkbox" value="5" onClick="itemSum(this.form);">&nbsp;</td>
+  </tr>
+  <tr>
+    <td>3.대체로 나는 현재의 나 자신에 대해 만족한다.</td>
+    <td height="25">&nbsp;1<input name="chkbox" type="checkbox" value="1" onClick="itemSum(this.form);">&nbsp;</td>
+    <td height="25">&nbsp;2<input name="chkbox" type="checkbox" value="2" onClick="itemSum(this.form);">&nbsp;</td>
+    <td height="25">&nbsp;3<input name="chkbox" type="checkbox" value="3" onClick="itemSum(this.form);">&nbsp;</td>
+    <td height="25">&nbsp;4<input name="chkbox" type="checkbox" value="4" onClick="itemSum(this.form);">&nbsp;</td>
+    <td height="25">&nbsp;5<input name="chkbox" type="checkbox" value="5" onClick="itemSum(this.form);">&nbsp;</td>
+  </tr>
+  <tr>
+    <td>4.이제까지 나 자신을 좋은 사람으로 여기지 않았다.</td>
+    <td height="25">&nbsp;1<input name="chkbox" type="checkbox" value="1" onClick="itemSum(this.form);">&nbsp;</td>
+    <td height="25">&nbsp;2<input name="chkbox" type="checkbox" value="2" onClick="itemSum(this.form);">&nbsp;</td>
+    <td height="25">&nbsp;3<input name="chkbox" type="checkbox" value="3" onClick="itemSum(this.form);">&nbsp;</td>
+    <td height="25">&nbsp;4<input name="chkbox" type="checkbox" value="4" onClick="itemSum(this.form);">&nbsp;</td>
+    <td height="25">&nbsp;5<input name="chkbox" type="checkbox" value="5" onClick="itemSum(this.form);">&nbsp;</td>
+  </tr>
+  <tr>
+    <td>5. 나 자신에 관해 다른 사람에게 자랑할 것이 별로 없다.</td>
+    <td height="25">&nbsp;1<input name="chkbox" type="checkbox" value="1" onClick="itemSum(this.form);">&nbsp;</td>
+    <td height="25">&nbsp;2<input name="chkbox" type="checkbox" value="2" onClick="itemSum(this.form);">&nbsp;</td>
+    <td height="25">&nbsp;3<input name="chkbox" type="checkbox" value="3" onClick="itemSum(this.form);">&nbsp;</td>
+    <td height="25">&nbsp;4<input name="chkbox" type="checkbox" value="4" onClick="itemSum(this.form);">&nbsp;</td>
+    <td height="25">&nbsp;5<input name="chkbox" type="checkbox" value="5" onClick="itemSum(this.form);">&nbsp;</td>
+  </tr>
+  <tr>
+    <td>6.나는 남과 비교해 보아 좋은 점이라고는 하나도 없다.</td>
+    <td height="25">&nbsp;1<input name="chkbox" type="checkbox" value="1" onClick="itemSum(this.form);">&nbsp;</td>
+    <td height="25">&nbsp;2<input name="chkbox" type="checkbox" value="2" onClick="itemSum(this.form);">&nbsp;</td>
+    <td height="25">&nbsp;3<input name="chkbox" type="checkbox" value="3" onClick="itemSum(this.form);">&nbsp;</td>
+    <td height="25">&nbsp;4<input name="chkbox" type="checkbox" value="4" onClick="itemSum(this.form);">&nbsp;</td>
+    <td height="25">&nbsp;5<input name="chkbox" type="checkbox" value="5" onClick="itemSum(this.form);">&nbsp;</td>
+  </tr>
+  <tr>
+    <td>7.나는 나 자신이 쓸모 없는 사람이라고 느낄 때가 많다.</td>
+    <td height="25">&nbsp;1<input name="chkbox" type="checkbox" value="1" onClick="itemSum(this.form);">&nbsp;</td>
+    <td height="25">&nbsp;2<input name="chkbox" type="checkbox" value="2" onClick="itemSum(this.form);">&nbsp;</td>
+    <td height="25">&nbsp;3<input name="chkbox" type="checkbox" value="3" onClick="itemSum(this.form);">&nbsp;</td>
+    <td height="25">&nbsp;4<input name="chkbox" type="checkbox" value="4" onClick="itemSum(this.form);">&nbsp;</td>
+    <td height="25">&nbsp;5<input name="chkbox" type="checkbox" value="5" onClick="itemSum(this.form);">&nbsp;</td>
+  </tr>
+  <tr>
+    <td>8.가끔 나 아닌 다른 사람이 되었으면 하는 생각이 든다.</td>
+    <td height="25">&nbsp;1<input name="chkbox" type="checkbox" value="1" onClick="itemSum(this.form);">&nbsp;</td>
+    <td height="25">&nbsp;2<input name="chkbox" type="checkbox" value="2" onClick="itemSum(this.form);">&nbsp;</td>
+    <td height="25">&nbsp;3<input name="chkbox" type="checkbox" value="3" onClick="itemSum(this.form);">&nbsp;</td>
+    <td height="25">&nbsp;4<input name="chkbox" type="checkbox" value="4" onClick="itemSum(this.form);">&nbsp;</td>
+    <td height="25">&nbsp;5<input name="chkbox" type="checkbox" value="5" onClick="itemSum(this.form);">&nbsp;</td>
+  </tr>
+  <tr>
+    <td>9.나는 내가 미워질 때가 있다.</td>
+    <td height="25">&nbsp;1<input name="chkbox" type="checkbox" value="1" onClick="itemSum(this.form);">&nbsp;</td>
+    <td height="25">&nbsp;2<input name="chkbox" type="checkbox" value="2" onClick="itemSum(this.form);">&nbsp;</td>
+    <td height="25">&nbsp;3<input name="chkbox" type="checkbox" value="3" onClick="itemSum(this.form);">&nbsp;</td>
+    <td height="25">&nbsp;4<input name="chkbox" type="checkbox" value="4" onClick="itemSum(this.form);">&nbsp;</td>
+    <td height="25">&nbsp;5<input name="chkbox" type="checkbox" value="5" onClick="itemSum(this.form);">&nbsp;</td>
+  </tr>
+  <tr>
+    <td>10. 나는 나 자신이 잘못된 사람이라고 느껴질 때가 있다.</td>
+    <td height="25">&nbsp;1<input name="chkbox" type="checkbox" value="1" onClick="itemSum(this.form);">&nbsp;</td>
+    <td height="25">&nbsp;2<input name="chkbox" type="checkbox" value="2" onClick="itemSum(this.form);">&nbsp;</td>
+    <td height="25">&nbsp;3<input name="chkbox" type="checkbox" value="3" onClick="itemSum(this.form);">&nbsp;</td>
+    <td height="25">&nbsp;4<input name="chkbox" type="checkbox" value="4" onClick="itemSum(this.form);">&nbsp;</td>
+    <td height="25">&nbsp;5<input name="chkbox" type="checkbox" value="5" onClick="itemSum(this.form);">&nbsp;</td>
+  </tr>
+</table><br>
+<table>
+    <tr>
+    <td height="25">&nbsp;당신의 점수는 &nbsp;<input name="total_sum" type="text" size="20" readonly></td>
+  </tr>
+</table>
+</form>
+<br /><br /><br /><br /><br />
+<h1>[자아존중감 검사결과]</h1>
+<div style="margin-left:auto;margin-right:auto;width:300px;">
+<table border="0" cellspacing="0" cellpadding="0">
+	<tr><td>30점이상</td><td>&nbsp;&nbsp;>&nbsp;&nbsp;</td><td>자존감 왕!</td></tr>
+	<tr><td>30점미만</td><td>&nbsp;&nbsp;>&nbsp;&nbsp;</td><td>나에 대해 더 알아볼까?</td></tr>
+</table>
+</div>
+<br /><br /><br /><br />
+<h1 style="margin-left:auto;margin-right:auto;width:800px;">더욱 정밀한 소견을 받으려면? 아래 Map을 참고하세요!!</h1>
+</div>
+	<div id="map" style="width:500px;height:400px;"></div>
+	<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=08d6f333a4734ff4cb4461f56ecef481"></script>
+	<script>
+		var container = document.getElementById('map');
+		var options = {
+			center: new daum.maps.LatLng(37.5926338,127.02494550000006),
+			level: 3
+		};
+
+		var map = new daum.maps.Map(mapContainer, mpaOption);
+		
+		
+		// 마커가 표시될 위치입니다 
+        var markerPosition  = new daum.maps.LatLng(37.5926338,127.02494550000006); 
+
+		// 마커를 생성합니다
+		var marker = new daum.maps.Marker({
+		    position: markerPosition
+		});
+		
+		// 마커가 지도 위에 표시되도록 설정합니다
+		marker.setMap(map);
+	</script>
+	
+</body>
+</html>

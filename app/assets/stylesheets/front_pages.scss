@@ -1,0 +1,594 @@
+// Place all the styles related to the front_pages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+@import url(//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css);
+@import url(//fonts.googleapis.com/css?family=Open+Sans:700,400,300);
+@import url(//fonts.googleapis.com/css?family=Dorsa);
+@import url(http://fonts.googleapis.com/css?family=Dosis:400,600);
+@font-face { font-family: 'GabiaBombaram'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/GabiaBombaram.woff') format('woff'); font-weight: normal; font-style: normal; }
+@font-face { font-family: 'Daehan'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Daehan.woff') format('woff'); font-weight: normal; font-style: normal; }
+@font-face { font-family: 'OTEnjoystoriesBA'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/OTEnjoystoriesBA.woff') format('woff'); font-weight: normal; font-style: normal; }
+@font-face { font-family: 'GabiaSolmee'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/GabiaSolmee.woff') format('woff'); font-weight: normal; font-style: normal; }
+@font-face { font-family: 'Swagger'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/Swagger.woff') format('woff'); font-weight: normal; font-style: normal; }
+/* =======================================================
+					variables
+======================================================== */
+/*========================================================
+										Main layout styles
+=========================================================*/
+body {
+  background-image: url("/../image/background.jpg");
+  background-size: cover;
+  font: 14px/24px Georgia, 'Times New Roman', Times, serif;
+  margin-bottom: 0;
+}
+a {
+  text-decoration: none;
+  cursor: pointer;
+  -webkit-transition: 0.3s all ease;
+  transition: 0.3s all ease;
+}
+a:hover {
+  -webkit-transition: 0.3s all ease;
+  transition: 0.3s all ease;
+}
+a[href^="tel:"] {
+  color: inherit;
+  text-decoration: none;
+}
+h2 a,
+h3 a,
+h4 a,
+h5 a {
+  color: inherit;
+  font: inherit;
+}
+h2 a:hover,
+h3 a:hover,
+h4 a:hover,
+h5 a:hover {
+  color: url("/../image/background.jpg");
+}
+* {
+  -webkit-text-size-adjust: none;
+}
+::-moz-selection {
+  /* Code for Firefox */
+  color: #ffffff;
+  background: #666666;
+}
+::selection {
+  color: #ffffff;
+  background: #666666;
+}
+
+/*========================================================
+										HEADER styles
+=========================================================*/
+
+#header {
+  padding: 0px 0px;
+  text-align: left;
+  height: 150px;
+  z-index: -50;
+}
+#header .container {
+  margin-left: 0px; 
+  z-index: -5;
+  width: 300px;
+}
+#head {
+  padding: 28px 70px;
+  text-align: left;
+  height: 150px;
+  color: #ffffff;
+  font-family: 'Swagger';
+  font-size: 15px;
+}
+#header .social { 
+  text-align: center;
+}
+#header .social .fa {
+  width: 69px;
+  height: 69px;
+  background: #fff;
+  line-height: 69px;
+  margin: 0 35px 50px 35px;
+  font-size: 38px;
+  color: #423e3e;
+  text-align: center;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+#header .social .fa:hover {
+  background: url("/../image/background.jpg");
+}
+#header h1 {
+  margin-left: 30px;
+  color: #ffffff;
+  margin-top: 180px;
+  width: 600px;
+}
+#header h1 a {
+  font-size: 98px;
+  font-family: 'Swagger';
+  color: #ffffff;
+  text-transform: uppercase;
+  display: inline-block;
+  height: 128px;
+}
+#header h1 a span {
+  display: block;
+  font: 100px 'Swagger';
+  margin-top: 28px;
+  text-transform: none;
+}
+#header nav {
+  margin-top: 0px;
+}
+.index #header {
+  position: relative;
+  background: none;
+  height: 0;
+  padding: 0;
+}
+.index #header #stuck_container {
+  position: absolute;
+  z-index: 9;
+  left: 0;
+  right: 0;
+  top: 0px;
+}
+
+@media only screen and (max-width: 767px) {
+  #header {
+    text-align: center;
+  }
+  #header h1,
+  #header nav {
+    float: none;
+    display: inline-block;
+  }
+  #header nav {
+    display: block;
+  }
+  #header .social .fa {
+    margin: 0 25px 50px 25px;
+  }
+}
+@media only screen and (max-width: 480px) {
+  #header .social .fa {
+    margin: 0 5px 50px 5px;
+    
+  }
+}
+
+/* Main menu styles
+========================================================*/
+.con2{
+  display: inline-block;
+  z-index: 80;
+  padding-top: 0px;
+}
+
+.sf-menu > li {
+  display: table-cell;
+  table-layout: fixed;
+  padding-left: 80px;
+  margin: 30px;
+  border-left:1px solid #ffffff;
+  z-index: 20;
+}
+.sf-menu > li > a {
+  color: #b5b2b2;
+  font-size: 20px;
+  margin-right: 25px;
+  font-family: 'Dosis', sans-serif;
+  margin-bottom: 30px;
+  position: relative;
+}
+.sf-menu > li > a:hover {
+  color: #ffffff;
+  display: table-cell;
+  table-layout: fixed;
+  padding-left: 20px;
+}
+.sf-menu > li > a:hover:before {
+  background-position: 0 0;
+  top: -46px;
+  height: 21px;
+}
+.sf-menu > li > a:before {
+  content: "";
+  position: absolute;
+  top: -52px;
+  left: 37%;
+  width: 38px;
+  height: 12px;
+  background: url(../images/menu-bullet.png) 0 -21px no-repeat;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.sf-menu > li:first-child {
+  padding-right: 0;
+}
+.sf-menu > li.current > a {
+  color: #ffffff;
+}
+.sf-menu > li.current > a:before {
+  background-position: 0 0;
+  top: -46px;
+  height: 21px;
+}
+@media only screen and (max-width: 979px) {
+  .sf-menu li {
+    padding-right: 0;
+  }
+}
+
+.bout2{
+  font-size: 40px;
+  font-family: 'OTEnjoystoriesBA';
+  color: black;
+}
+.bout3{
+  font-size: 21px;
+  line-height: 35px;
+  color: black;
+
+}
+.bout4{
+  font-size: 25px;
+  color: black;
+}
+.bout_last{
+  font-size: 15px;
+  color: black;
+}
+
+/* First level sub-menu styles
+========================================================*/
+.sf-menu ul {
+  position: relative;
+  top: 20px;
+  right: 5%;
+  background: url("/../image/background.jpg");
+  color: #ffffff;
+  min-width: 160px;
+  z-index: 6;
+  display: none;
+  text-align: right;
+  padding-right: 10px;
+  margin-bottom: 100px;
+  
+  
+}
+.sf-menu ul:before {
+  content: "";
+  position: relative;
+  top: 10px;
+  right: calc(50% - 3px);
+  width: 0;
+  height: 0;
+  margin-bottom: 50%;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  border-bottom: 10px solid url("/../image/background.jpg");
+}
+.sf-menu ul li {
+  height: 48px;
+  line-height: 48px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.sf-menu ul li a {
+  line-height: 12px;
+  padding: 0px 0;
+  color: #ffffff;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  display: block;
+}
+.sf-menu ul li:hover > a {
+  color: #7d261a;
+}
+/* Second level sub-menu styles
+========================================================*/
+.sf-menu ul ul {
+  position: absolute;
+  top: 0;
+  margin-bottom: 50px;
+  left: 126px;
+  z-index: 8;
+  min-width: 157px;
+  border: none;
+  background: #dbb3ae;
+}
+.sf-menu ul ul:before {
+  display: none;
+}
+.sf-menu ul ul a:hover {
+  color: url("/../image/background.jpg");
+}
+@media only screen and (max-width: 767px) {
+  .sf-menu {
+    display: none;
+  }
+  .select-menu {
+    display: block;
+    width: 100%;
+    border-color: url("/../image/background.jpg");
+    color: #666;
+    font-size: 16px;
+    padding: 5px;
+    margin-bottom: 20px;
+  }
+}
+/* Stuck menu styles
+========================================================*/
+.isStuck {
+  background: url(../image/background.jpg) bottom;
+  background-size: cover;
+  z-index: 9;
+  padding: 0 0 10px 0;
+  border-bottom: 1px solid url("/../image/background.jpg");
+}
+.isStuck .social {
+  display: none;
+}
+.isStuck h1 {
+  display: none;
+}
+.isStuck nav {
+  margin-top: 17px !important;
+}
+.isStuck .sf-menu {
+  margin-top: 3px;
+  border: none;
+  padding: 0;
+  
+}
+.isStuck .sf-menu > li > a:before {
+  display: none;
+}
+.isStuck .sf-menu > li > a:hover:before {
+  display: none;
+}
+.isStuck .sf-menu > li.current > a:before {
+  display: none;
+}
+@media only screen and (max-width: 979px) {
+  .isStuck {
+    display: none !important;
+  }
+}
+/*========================================================
+										CONTENT styles
+=========================================================*/
+h1{
+  text-align: center;
+}
+
+h2,
+h3,
+h4 {
+  font-family: 'Marvel', sans-serif;
+  color: #3c3c3e;
+}
+h2 {
+  font: 400 60px/60px 'Open Sans', sans-serif;
+  text-align: center;
+  margin-bottom: 50px;
+  border-bottom: 3px solid #3c3c3e;
+  display: inline-block;
+}
+h3 {
+  font-size: 50px;
+  font-family: 'Marvel', sans-serif;
+  text-align: center;
+  line-height: 50px;
+}
+h4 {
+  font-size: 28px;
+  line-height: 28px;
+  font-family: 'Open Sans', sans-serif;
+  text-align: center;
+  margin-top: 0px;
+  margin-bottom: 20px;
+}
+h5 {
+  font-size: 16px;
+  line-height: 16px;
+  font-family: 'Open Sans', sans-serif;
+  text-align: left;
+  margin-bottom: 10px;
+  color: #3c3c3e;
+}
+.h5__mod {
+  color: url("/../image/background.jpg");
+}
+p {
+  font: 16px/20px 'Open Sans', sans-serif;
+  color: #727070;
+}
+ .day_note_content {
+        text-align: center;
+        font-size: 17px;
+        font-family: 'Daehan';
+    }
+
+
+
+  .about{
+    margin-top: 180px;
+    margin-bottom: 20px;
+    height: 600px;
+    width: 100%;
+    background-color: #ffffff;
+    background: rgba(255, 255, 255, 0.5);
+    text-align: center;
+}
+
+ 
+/*========================================================
+										FOOTER styles
+=========================================================*/
+#footer .footer_bottom {
+  height: 35px;
+  text-align: center;
+  opacity: 0.5;
+  margin-bottom: -10px;
+}
+
+
+
+
+/*========================================================
+										Widget styles
+=========================================================*/
+/* UItoTop styles
+========================================================*/
+#toTop {
+  display: none;
+  background: url("/../image/background.jpg");
+  text-decoration: none;
+  position: fixed;
+  bottom: 80px;
+  right: 30px;
+  overflow: hidden;
+  border: none;
+  color: #fff;
+  width: 73px;
+  height: 73px;
+  font-size: 72px;
+  line-height: 73px;
+  z-index: 20;
+  text-align: center;
+  -webkit-transition: color 0.5s ease;
+  transition: color 0.5s ease;
+}
+#toTop:hover {
+  outline: none;
+  color: #7d261a;
+  -webkit-transition: color 0.5s ease;
+  transition: color 0.5s ease;
+}
+@media only screen and (max-width: 1199px) {
+  #toTop {
+    display: none !important;
+  }
+}
+/*========================================================
+								RESPONSIVE LAYOUTS STYLES 
+=========================================================*/
+@media only screen and (max-width: 1199px) {
+  .sample {
+    height: auto;
+    /*delete this class*/
+  }
+}
+@media only screen and (max-width: 979px) {
+  .sample {
+    height: auto;
+    /*delete this class*/
+  }
+}
+@media only screen and (max-width: 767px) {
+  .sample {
+    height: auto;
+    /*delete this class*/
+  }
+}
+@media only screen and (max-width: 480px) {
+  .sample {
+    height: auto;
+    /*delete this class*/
+  }
+}
+@media only screen and (max-width: 320px) {
+  .sample {
+    height: auto;
+    /*delete this class*/
+  }
+}
+/*Core variables and mixins*/
+
+
+
+/*========================================================
+										Movie styles
+=========================================================*/
+
+.y{font: 400 50px/15px 'GabiaBombaram', sans-serif;
+  color: #ffffff;
+  text-transform: uppercase;
+  display: inline-block;
+  height: 130px;
+  text-align: left;
+  margin-left: 100px;
+  margin-top: 50px;
+ 
+}
+.b{margin-left: 100px;
+   margin-top: -120px;
+   color:#424242;
+   font: 400 20px/20px 'GabiaBombaram', sans-serif;
+}
+.m{margin-left: 100px;
+  color:#424242;
+  font: 400 20px/20px 'GabiaBombaram', sans-serif;
+}
+.p{margin-left: 100px;}
+.o{margin-left: -60px;
+   color:#424242;
+}
+.v{margin-left: 100px;
+  color:#424242;}
+.zz{color:#424242;}
+.h{margin-left: 100px;
+  color:#424242;
+}
+.yy{font: 400 50px/30px 'GabiaBombaram', sans-serif;
+  color: #ffffff;
+  text-transform: uppercase;
+  display: inline-block;
+  height: 130px;
+  text-align: left;
+  margin-left: 100px;
+   margin-bottom: 100px;
+  margin-top: 80px;
+}
+.yyy{font: 400 50px/30px 'GabiaBombaram', sans-serif;
+  color: #ffffff;
+  text-transform: uppercase;
+  display: inline-block;
+  height: 130px;
+  margin-left: 100px;
+  margin-bottom: 80px;
+  margin-top: 500px;
+}
+
+/*========================================================
+										Service styles
+=========================================================*/
+
+div.sv{
+      height: 800px; 
+      width: 850px;
+      margin-left: 16%;
+      border:1px
+      solid white;
+      background: #FBEFF5;
+}
+
+.sv p {
+      text-align: center;
+      font-size: 40px;
+}
+
+
+
+/*========================================================
+										Shop styles
+=========================================================*/
+
